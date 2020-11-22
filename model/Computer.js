@@ -1,12 +1,12 @@
 const lista = [{id: 0, nome:"Hp", memoria:"2tb"},
                {id: 1, nome:"Lenovo", memoria:"1tb"}]
-
+const idNuovo = 1
 module.exports = class Computer {
 
   constructor(computer) { this.computer=computer }
 
   insert() {
-    let nuovoid = lista.length
+    let nuovoid = idNuovo+1
     this.computer.id=nuovoid
     lista[nuovoid]=this.computer
     return nuovoid;

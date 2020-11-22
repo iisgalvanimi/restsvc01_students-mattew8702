@@ -1,0 +1,18 @@
+.footer{
+    background-color:#404040;
+    color:white;
+    height: 30%;
+    width: 100%;
+    padding: 50px;
+}
+.footer p{
+    margin-bottom: 0;
+}
+
+h1{
+    padding: 20px;
+}
+
+h3{
+    padding-bottom: 20px;
+}
