@@ -12,13 +12,28 @@ const cors = require('cors');
 const corsWhitelist = ['http://localhost']
 const corsOptions = { origin: corsWhitelist };
 
+
+const defaultRoutes = require('../routes/default');   
+const logRoutes = require('../routes/logging');     
+const apiComputerRoutes = require('../routes/apiComputer');     
+const errorContoller = require('../controller/error');
+
 //------------------------
 //    MIDDLEWARE
 //-----------------------
+app.use(helmet());
+app.use(new cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(logRoutes);       
+app.use(defaultRoutes);             
+app.use(apiComputerRoutes);              
+app.use(errorContoller.get404Page);    
+apiComputerRoutes
 
 //------------------------
 //    MAIN
 //-----------------------
 app.listen(PORT, function () {
-  console.log(`Server app listening on port ${PORT}!`);
+  console.log(`Server in funzione sulla porta ${PORT}!`);
 });

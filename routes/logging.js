@@ -4,7 +4,7 @@ module.exports = router;
 
 
 router.use(function (req, res, next) {
-    console.log(`Serving new incoming request ${req.method} "${req.url}" from ${req.ip} `);
+    console.log(`In esecuzione ${req.method} "${req.url}" da ${req.ip} `);
     next()
 });
 
