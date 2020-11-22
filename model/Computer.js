@@ -6,7 +6,7 @@ module.exports = class Computer {
   constructor(computer) { this.computer=computer }
 
   insert() {
-    let nuovoid = idNuovo+1
+    let nuovoid =idNuovo+1
     this.computer.id=nuovoid
     lista[nuovoid]=this.computer
     return nuovoid;
