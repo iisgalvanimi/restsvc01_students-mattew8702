@@ -33,7 +33,7 @@ module.exports = class Computer {
   }
 
   static updateByID(indice,computer) {
-    if (lista[indice] = computer){
+    if (lista[indice] != undefined && lista[indice]!=null){
       return 0; // 0 OK, 1 KO
     }else{
       return 1; // KO

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card'
 import {Helmet} from "react-helmet";
-
+import './PrelevaTutto.css'
 class PrelevaTutto extends Component {
     constructor(props){
         super(props);
@@ -23,7 +23,7 @@ class PrelevaTutto extends Component {
     }
 
     fetchRest(){
-       fetch("http://161.97.114.50:9096/api/tuttiPc")
+       fetch("http://161.97.114.50:9096/api/pc")
        .then(resp => resp.json())
        .then(data => {
            this.setState({tabelle: data});
@@ -34,18 +34,19 @@ class PrelevaTutto extends Component {
         return (
             <div className="row">
                 {tabelle.map(tabella =>
-                    
-                <div key={tabella.id} className="col-sm">
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="pc.jpg" />
-                        <Card.Body>
-                            <Card.Title>ID: {tabella.id} <br></br> Nome: {tabella.nome}</Card.Title>
-                            <Card.Text>
-                            Memoria: {tabella.memoria}
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </div>
+                    tabella !== null &&(
+                        <div id="riga" key={tabella.id} className="col-sm">
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src="pc.jpg" />
+                                <Card.Body>
+                                    <Card.Title>ID: {tabella.id} <br></br> Nome: {tabella.nome}</Card.Title>
+                                    <Card.Text>
+                                    Memoria: {tabella.memoria}
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </div>
+                    )
                 )}
                 
             </div>

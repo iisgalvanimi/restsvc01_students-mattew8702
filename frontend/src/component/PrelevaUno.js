@@ -20,7 +20,7 @@ class PrelevaUno extends Component {
                 <Helmet>
                     <title>Pc - AG.com</title>
                 </Helmet>
-                <h1>Preleva un PC</h1><br/><h3>Uri: {this.props.uri}</h3>
+                <h1><b>Preleva un PC</b></h1><br/><h3>Uri: {this.props.uri}</h3>
                 <Form onSubmit={this.invioDati}>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>ID del Pc</Form.Label>
@@ -40,7 +40,7 @@ class PrelevaUno extends Component {
     }
 
     fetchRest(id){
-        fetch("http://161.97.114.50:9096/api/unPc/"+id)
+        fetch("http://161.97.114.50:9096/api/pc/"+id)
         .then(resp => resp.json())
         .then(data => {
             this.setState({id:this.state.id, nome:data.nome, memoria:data.memoria, msg:data.msg})

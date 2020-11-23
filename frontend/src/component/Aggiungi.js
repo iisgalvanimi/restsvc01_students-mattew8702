@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import {Helmet} from "react-helmet";
 
 class Aggiungi extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            id:"",
+            nome:undefined,
+            memoria:undefined,
+        };
+    }
     render() {
         return (
             <div>

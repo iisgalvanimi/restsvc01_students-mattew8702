@@ -8,7 +8,7 @@ class PageNotFound extends Component {
                 <Helmet>
                     <title>Error 404 - AG.com</title>
                 </Helmet>
-                <h1>pagina non trovata</h1>
+                <h1>Pagina non trovata</h1>
             </div>
         );
     }

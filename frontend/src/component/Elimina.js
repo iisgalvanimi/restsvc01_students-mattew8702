@@ -18,7 +18,7 @@ class Elimina extends Component {
                 <Helmet>
                     <title>Elimina - AG.com</title>
                 </Helmet>
-                <h1>Elimina un PC</h1>
+                <h1><b>Elimina un PC</b></h1>
                 <h3>Uri: {this.props.uri}</h3>
                 <Form onSubmit={this.invioDati}>
                     <Form.Group controlId="formBasicEmail">
@@ -38,7 +38,7 @@ class Elimina extends Component {
     }
 
     fetchRest(id){
-        fetch("http://161.97.114.50:9096/api/cancellaPc/"+id, {
+        fetch("http://161.97.114.50:9096/api/pc/"+id, {
             method: 'DELETE',})
         .then(resp => resp.json())
         .then(data => {

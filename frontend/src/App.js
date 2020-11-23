@@ -17,11 +17,11 @@ function App() {
       <BarraSuperiore></BarraSuperiore>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/prelevaTutto" component={() => <PrelevaTutto uri={"/api/tuttiPc"} />}/>
-        <Route exact path="/prelevaUno" component={() => <PrelevaUno uri={"/api/unPc/<id>"} />}/>
-        <Route exact path="/aggiornaPc" component={() => <Aggiorna uri={"/api/aggiornaPc/<id>"} />}/>
-        <Route exact path="/elimina" component={() => <Elimina uri={"/api/cancellaPc/<id>"} />}/>
-        <Route exact path="/aggiungi" component={() => <Aggiungi uri={"/api/nuovoPc"} />}/>
+        <Route exact path="/prelevaTutto" component={() => <PrelevaTutto uri={"/api/pc"} />}/>
+        <Route exact path="/prelevaUno" component={() => <PrelevaUno uri={"/api/pc/<id>"} />}/>
+        <Route exact path="/aggiornaPc" component={() => <Aggiorna uri={"/api/pc/<id>"} />}/>
+        <Route exact path="/elimina" component={() => <Elimina uri={"/api/pc/<id>"} />}/>
+        <Route exact path="/aggiungi" component={() => <Aggiungi uri={"/api/pc"} />}/>
         <Route path="*" component={PageNotFound}/>
       </Switch>
       <BarraInferiore></BarraInferiore>
