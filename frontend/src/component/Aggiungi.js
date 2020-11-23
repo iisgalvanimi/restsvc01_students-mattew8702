@@ -18,7 +18,7 @@ class Aggiungi extends Component {
                 <Helmet>
                     <title>Aggiungi - AG.com</title>
                 </Helmet>
-                <h1>Aggiungi un Pc</h1><br></br>
+                <h1><b>Aggiungi un Pc</b></h1><br></br>
                 <h3>Uri: {this.props.uri}</h3>
                 <Form onSubmit={this.invioDati}>
                     <Form.Group controlId="formBasicEmail">
