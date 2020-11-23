@@ -23,10 +23,10 @@ module.exports = class Computer {
     }
   }
   static deleteByID(indice) {
-    if (lista[indice] == undefined){
+    if (lista[indice] == undefined || lista[indice] == undefined){
       return 1; // 0 KO
     }else{
-      lista.splice(indice,1)
+      lista[indice]=null;
       return 0; // OK
     }
     
