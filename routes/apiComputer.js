@@ -3,8 +3,8 @@ const router = express.Router();
 module.exports = router;
 const apiComputerController=require("../controller/apiComputer");
 
-router.get('/api/tuttiPc',       apiComputerController.getComputers);
-router.get('/api/unPc/:id',    apiComputerController.getComputer);
-router.post('/api/nuovoPc',      apiComputerController.insertComputer);
-router.delete('/api/cancellaPc/:id', apiComputerController.deleteComputer);
-router.put('/api/aggiornaPc/:id',    apiComputerController.updateComputer);
+router.get('/api/pc',       apiComputerController.getComputers);
+router.get('/api/pc/:id',    apiComputerController.getComputer);
+router.post('/api/pc',      apiComputerController.insertComputer);
+router.delete('/api/pc/:id', apiComputerController.deleteComputer);
+router.put('/api/pc/:id',    apiComputerController.updateComputer);
