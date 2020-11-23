@@ -57,6 +57,7 @@ class Aggiorna extends Component {
         e.preventDefault()
         if (this.state.id!=="" && this.state.nome!=="" && this.state.memoria!==""){
             this.fetchRest(this.state.id)
+            this.setState({id:"", nome:"", memoria:"", msg:this.state.msg})
         }
         
     }
@@ -76,6 +77,7 @@ class Aggiorna extends Component {
         .then(resp => resp.json())
         .then(data => {
             this.setState({id:this.state.id, nome:this.state.nome, memoria:this.state.memoria, msg:data.msg})
+            console.log(this.state.msg)
         });
     }
 
